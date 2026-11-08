@@ -1,6 +1,6 @@
 [build]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "node scripts/build.mjs"
 
 [[redirects]]
   from = "/thanks/"

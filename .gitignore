@@ -1,0 +1,5 @@
+dist/
+.openai/
+*.csv
+.env*
+node_modules/
