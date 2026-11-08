@@ -38,3 +38,9 @@ The current **Legacy Free** site allowance is **100 submissions per month across
 ## Public promotion
 
 Once release blockers are closed, secure the Facebook Page and matching Instagram/TikTok accounts, use the existing rings logo and brand colours, and link bios with `utm_source=facebook`, `instagram` or `tiktok`, plus `utm_campaign=founding-members`. Keep the base website URL unchanged. A first invitation should explain the Zimbabwe community, adults 18+, free registration and that the first gatherings are still being shaped. Do not use invented attendance figures, testimonials or events.
+
+## Draft social copy
+
+Bio: Good people. Better connections. A new Zimbabwe community for friends, useful connections and shared experiences. Adults 18+. Free to join.
+
+Founding invitation, to publish only after collection is cleared: Meeting people should lead to more than a saved number. We are starting Spheres Zimbabwe: a community for making friends, growing your network and sharing experiences. We are building the first group in Harare and would like 50–100 genuine founding members to help shape what comes next. It is free to register. Choose your interests and we will be in touch when the first gathering details are confirmed. Adults 18+. [Insert the verified website URL with the relevant campaign tags.]

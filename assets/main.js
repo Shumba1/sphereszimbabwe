@@ -108,10 +108,27 @@
   }
 
   const privacyForm = document.querySelector('form[name="privacy-requests"]');
-  if (privacyForm) privacyForm.addEventListener('submit', event => {
-    event.preventDefault();
-    if (privacyForm.reportValidity()) sendForm(privacyForm);
-  });
+  if (privacyForm) {
+    privacyForm.noValidate = true;
+    const email = document.getElementById('contact-email');
+    const phone = document.getElementById('privacy-whatsapp');
+    const name = document.getElementById('contact-name');
+    const message = document.getElementById('contact-message');
+    [email, phone, name, message].forEach(input => input.addEventListener('input', () => {
+      input.setCustomValidity('');
+      email.setCustomValidity('');
+    }));
+    privacyForm.addEventListener('submit', event => {
+      event.preventDefault();
+      name.setCustomValidity(name.value.trim() ? '' : 'Enter your name.');
+      message.setCustomValidity(message.value.trim() ? '' : 'Enter your request.');
+      email.setCustomValidity(email.value.trim() || phone.value.trim() ? '' : 'Give an email address or WhatsApp number so we can reply.');
+      const digits = phone.value.replace(/\D/g, '');
+      const validPhone = !phone.value.trim() || (/^\+?[\d ()-]+$/.test(phone.value.trim()) && digits.length >= 8 && digits.length <= 15);
+      phone.setCustomValidity(validPhone ? '' : 'Enter a WhatsApp number with 8 to 15 digits.');
+      if (privacyForm.reportValidity()) sendForm(privacyForm);
+    });
+  }
 
   async function sendForm(target) {
     const button = target.querySelector('[type="submit"]');
